@@ -8,6 +8,8 @@ let ContactForm = () => {
     const [enteenteredContact, setContact] = useState("");
     const [enteredComment, setComment] = useState("");
 
+    const [allEntry, setAllEntry] =useState([]);
+
 
     let fNameChangeHandler = (e) => {
         setFname(e.target.value)
@@ -27,21 +29,19 @@ let ContactForm = () => {
 
     let submitHandler = (e) => {
         e.preventDefault();
-        const formDetail = {
-            lastName : enteredFname,
-            firstName : enteredLname,
-            contact : enteenteredContact,
+        const newEntry = {
+            firstName : enteredFname,
+            lastName : enteredLname, 
+            number : enteenteredContact,
             comment : enteredComment
-        }
 
-        let final = formDetail;
-        console.log(e.target.value)
+        }
+        setAllEntry([...allEntry, newEntry]);
+        console.log(allEntry)
+
 
        
     }
-
-   
-
 
     return (
         <>
@@ -70,11 +70,24 @@ let ContactForm = () => {
 
                     </div>
                     <div className='col-sm-3'>
-                        <h4>Form submitted result</h4>
-                        <p></p>
-                        <p></p>
-                        <p>{}</p>
-                        <p>{}</p>
+                        <div>
+                            {
+                                allEntry.map((curElement) => {
+                                    return (
+                                         <div> 
+                                            <h4>form final result person {curElement.id}</h4>
+                                            <p>{curElement.firstName}</p>
+                                            <p>{curElement.lastName}</p>
+                                            <p>{curElement.number}</p>
+                                            <p>{curElement.comment}</p>
+
+
+                                         </div>
+
+                                    )
+                                })
+                            }
+                        </div>
 
                     </div>
                 </div>
