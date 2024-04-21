@@ -1,0 +1,48 @@
+.container img {
+    height: 250px;
+    width: 250px;
+}
+
+.main-container {
+    border: 1px solid #1a8754;
+    width: 70%;
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+
+.main-container button {
+    width: 80%!important;
+}
+
+.row button {
+    margin-left: 0px !important;
+}
+
+.main-container .discount{
+    position: absolute;
+    margin-top: -140px;
+    background-color: #1a8754;
+    padding: 10px;
+    color: #fff;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 2px;
+    opacity: 0.7;
+    cursor: pointer;
+
+}
+
+.st {
+    margin-left: 20px;
+    position: absolute;
+    margin-top: -280px;
+    padding: 10px;
+    color: #000;
+    cursor: pointer;
+    margin-left: 0px;
+    height: 80px;
+    width: 180px;
+    display: block;
+}
+
+

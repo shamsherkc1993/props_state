@@ -1,0 +1,8 @@
+.row input, .row textarea {
+    margin : 10px
+}
+
+.row button {
+    width: 300px;
+    margin-left: 10px;
+}
